@@ -1,0 +1,19 @@
+<app-header-films></app-header-films>
+<ion-content>
+  <ion-grid class="outerGrid">
+<ion-row>
+  <ion-col size="12" sizeLg="5">  
+    <ion-img class="imageSearched" [src]="loadedFilm.poster_path">
+    </ion-img>
+  </ion-col>
+  <ion-col>
+    <h1> {{loadedFilm.title}}</h1>
+    <span>Titulo original: {{loadedFilm.original_title}}</span><br/>
+    <span>Idioma Original: {{loadedFilm.original_language}}</span><br/>
+    <span>Fecha Estreno: {{loadedFilm.release_date}}</span>
+    <h3>Descripción:</h3>
+    <span>{{loadedFilm.overview}}</span>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>

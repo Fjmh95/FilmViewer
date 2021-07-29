@@ -1,0 +1,17 @@
+
+
+<ion-row>
+  <div class="slidersTitleContainer"><p class="sliderTitle"><span>Últimos Estrenos</span></p></div>
+</ion-row>
+  <ion-slides [scrollbar]="true" [options]="sliderOptions">
+    <ion-slide  class="slideContainer" *ngFor="let film of latestFilms" [routerLink]="['./', film.id]">
+      <ion-card>
+        <img  [src]="film.fullImagePath" />
+        <ion-card-header>
+          <ion-card-title class="cardTitle">{{film.title}}</ion-card-title>
+          <ion-card-subtitle class="cardSubtitle">{{film.original_title}} <span class="vote">{{film.vote_average}}</span></ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>

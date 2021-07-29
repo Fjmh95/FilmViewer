@@ -1,0 +1,8 @@
+<ion-header>
+  <ion-toolbar>
+          <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <ion-label id="title"><a [routerLink]="'/films'" routerLinkActive="router-link-active" >FilmViewer</a></ion-label>
+            <ion-input id="name" autocomplete="off" type="text" formControlName="query" placeholder="Buscar" required></ion-input>
+            </form>
+  </ion-toolbar>
+</ion-header>

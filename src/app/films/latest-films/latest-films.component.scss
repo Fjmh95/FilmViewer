@@ -1,0 +1,30 @@
+.slidersTitleContainer {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+.sliderTitle {
+  padding-left: 5px;
+  border-left: 3px solid white;
+  border-radius: px;
+}
+.slideContainer {
+  width: 300px;
+}
+@media (max-width: 768px) {
+  .slideContainer {
+    width: 200px;
+  }
+  .cardSubtitle {
+    font-size: 10px;
+    line-height: 1.2em;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+}
+.vote {
+  background-color: #447cad;
+  color: white;
+  padding: 2px;
+  border-radius: 8px;
+}

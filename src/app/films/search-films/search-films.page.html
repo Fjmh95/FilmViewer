@@ -1,0 +1,29 @@
+<app-header-films></app-header-films>
+
+<ion-content>
+  <ion-grid class="outerGrid">
+    <ion-list>
+      <ion-list-header class="searchListTitle">
+        Búsqueda de : {{searchId}}
+      </ion-list-header>
+      <ion-virtual-scroll [items]="searchedFilms" approxItemHeight="100px">
+      <ion-item class="searchItem" *virtualItem="let films; let itemBounds = bounds;" [routerLink]="['/films/', films.id]">
+        <ion-thumbnail class="thumbnailSearch" slot="start">
+          <img [src]="films.fullImagePath">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>{{films.title}}</h3>
+          <p>{{films.original_title}}</p>
+          <p><span class="vote">{{films.vote_average}}</span> Popularidad: {{films.popularity}}</p>
+        </ion-label>
+      </ion-item>
+      </ion-virtual-scroll>
+
+
+    </ion-list>
+</ion-grid>
+
+  <div *ngIf="searchedFilms.length===0" class="searchError">
+    <h1>La búsqueda no ha dado resultados</h1>
+  </div>
+</ion-content>
